@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Details</h1>
+        <div style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+            <p><strong>Name:</strong> <%= contact.name %></p>
+            <p><strong>Phone:</strong> <%= contact.phone %></p>
+            <p><strong>Email:</strong> <%= contact.email %></p>
+        </div>
+        <div style="display: flex; gap: 5px; margin-bottom: 10px;">
+            <a href="/contacts/<%= contact.id %>/edit" style="flex: 1; color: white; background-color: green; padding: 10px; text-align: center; text-decoration: none; border-radius: 5px; display: block;">Edit</a>
+            <form action="/contacts/<%= contact.id %>/delete" method="POST" style="flex: 1; display: block;">
+                <button type="submit" style="width: 100%; color: white; background-color: rgb(197, 15, 15); border: none; padding: 10px; border-radius: 5px; cursor: pointer; text-align: center;">Delete</button>
+            </form>
+        </div>
+        <a href="/contacts" class="back" style="text-decoration: none; color: rgb(255, 255, 255); padding: 10px 15px; background-color: #6c757d; border-radius: 5px;">Back to Contact List</a>
+    </div>
+</body>
+</html>
